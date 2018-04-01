@@ -1,0 +1,95 @@
+html {
+	font-size: 42px;
+	font-family: 'Lora';
+}
+
+body {
+	background-color: #F3315A;
+	margin: 0;
+}
+
+h1 {
+	color: #fff;
+	font-family: 'Fjalla One';
+	font-size: .8rem;
+	letter-spacing: 0.2em;
+	line-height: 60px;
+	text-align: center;
+	text-transform: uppercase;
+	display: block;
+	margin: 1rem auto;
+	text-shadow: 2px 2px 6px rgba(0,0,0,.7);
+	transition: all 1.5s;
+	transition-timing-function: ease-in-out;
+}
+
+p {
+	color: #3C0511;
+	font-size: 1rem;
+	line-height: 60px;
+	margin-bottom: .8rem;
+	text-align: center;
+}
+
+.quote {
+	text-align: right;
+	margin: 0px 5% 1.5rem 5%;
+	span {
+		font-size: .8rem;
+	}
+}
+
+.container {
+	.player {
+		margin: 0 5%;
+		display: block;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-around;
+		align-items: center;
+		iframe {
+			flex-shrink: 0;
+			margin: 0 0 2rem  0;
+			max-width: 100%;
+		}
+	}
+	.gallery {
+		margin: 0 5%;
+		margin-bottom: 3rem;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: flex-start;
+		align-items: center;
+		a {
+			flex-shrink: 0;
+			margin: auto;
+			max-width: 20%;
+			img {
+				transition: transform 1.5s;
+				transition-timing-function: ease-in-out;
+				width: 100%;
+				box-shadow: 2px 2px 20px 0px black;
+				border: 3px white solid;
+			}
+		}
+	}
+}
+
+
+
+@media (max-width: 600px) {
+	html {
+		font-size: 32px;
+		font-family: 'Lora';
+	}
+	.container {
+		.player {
+			margin: 0;
+		}
+		.gallery {
+			a {
+				max-width: 33.3%;
+			}
+		}
+	}
+}

@@ -1,0 +1,25 @@
+{
+  "name": "collage",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Darival/collage.git",
+  "author": "Darival <darivalrcv@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "sass": "sass sass/app.scss css/app.css"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^3.2.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.0",
+    "pump": "^3.0.0"
+  },
+  "dependencies": {
+    "gulp-uglifycss": "^1.0.9",
+    "jquery": "^3.3.1",
+    "lity": "^2.3.0"
+  }
+}
