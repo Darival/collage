@@ -29,7 +29,7 @@ gulp.task('sass', function() {
         .pipe(browserSync.stream());
 });
 
-gulp.task('bundle', function (cb) {
+gulp.task('build', function (cb) {
     gulp.start('bundlejs');
     gulp.start('bundlecss');
 });
