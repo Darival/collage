@@ -30,8 +30,12 @@ gulp.task('sass', function() {
 });
 
 gulp.task('build', function (cb) {
+    gulp.src('./node_modules/jquery/dist/jquery.min.js')
+        .pipe(gulp.dest('./dist/js'));
     gulp.start('bundlejs');
+    gulp.start('js');
     gulp.start('bundlecss');
+    gulp.start('sass');
 });
 
 gulp.task('bundlejs', function (cb) {
