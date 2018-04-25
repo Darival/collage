@@ -14,7 +14,7 @@ gulp.task('serve', ['sass'], function() {
     });
 
     gulp.src('./node_modules/jquery/dist/jquery.min.js')
-        .pipe(gulp.dest('./js'));
+        .pipe(gulp.dest('./dist/js'));
 
     gulp.watch("./resources/scss/*.scss", ['sass']);
     gulp.watch("./resources/js/*.js", ['js']);
@@ -25,7 +25,7 @@ gulp.task('serve', ['sass'], function() {
 gulp.task('sass', function() {
     return gulp.src("./resources/scss/*.scss")
         .pipe(sass())
-        .pipe(gulp.dest("./css"))
+        .pipe(gulp.dest("./dist/css"))
         .pipe(browserSync.stream());
 });
 
@@ -39,7 +39,7 @@ gulp.task('bundlejs', function (cb) {
             "./node_modules/lity/dist/lity.min.js",
         ])
         .pipe(concat('bundle.min.js'))
-        .pipe(gulp.dest('./js'));
+        .pipe(gulp.dest('./dist/js'));
 });
 
 gulp.task('bundlecss', function (cb) {
@@ -47,7 +47,7 @@ gulp.task('bundlecss', function (cb) {
             "./node_modules/lity/dist/lity.min.css",
         ])
         .pipe(concat('bundle.min.css'))
-        .pipe(gulp.dest('./css'))
+        .pipe(gulp.dest('./dist/css'))
 });
 
 gulp.task('js', function(){
@@ -55,7 +55,7 @@ gulp.task('js', function(){
         .pipe(sourcemaps.init())
         .pipe(concat('app.min.js'))
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest('./js'))
+        .pipe(gulp.dest('./dist/js'))
         .pipe(browserSync.stream());
 });
 
